@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Therapeutic Work</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  color: #2f2f2f;
+  background: #f4f1ed;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  height: 100vh;
+  background: url('images/hero.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(30, 30, 30, 0.45);
+}
+
+.hero-content {
+  position: relative;
+  max-width: 700px;
+  margin-left: 10%;
+  color: white;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 52px;
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  opacity: 0.85;
+  margin-bottom: 30px;
+}
+
+.button {
+  padding: 12px 22px;
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.3);
+  color: white;
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+}
+
+/* FEATURES */
+.section {
+  padding: 80px 10%;
+  text-align: center;
+  background: #f4f1ed;
+}
+
+.features {
+  display: flex;
+  gap: 40px;
+}
+
+.feature {
+  flex: 1;
+}
+
+.feature h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+}
+
+.feature p {
+  opacity: 0.7;
+}
+
+/* HOW IT WORKS */
+.steps {
+  display: flex;
+  margin-top: 40px;
+  gap: 40px;
+}
+
+.step {
+  flex: 1;
+}
+
+.step h1 {
+  font-size: 48px;
+  font-family: 'Playfair Display', serif;
+}
+
+.quote {
+  margin-top: 60px;
+  font-style: italic;
+  font-size: 20px;
+}
+
+/* FOOTER */
+.footer {
+  background: #2f2f2f;
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.footer a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .hero {
+    height: auto;
+    padding: 100px 20px;
+  }
+
+  .hero-content {
+    margin-left: 0;
+  }
+
+  .features,
+  .steps {
+    flex-direction: column;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="overlay"></div>
+
+  <div class="hero-content">
+    <h1>
+      You don’t need years of therapy<br>
+      to feel a real shift.
+    </h1>
+
+    <p>
+      Most people were never guided to where change actually happens.
+    </p>
+
+    <button class="button">Start a conversation</button>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="section">
+  <div class="features">
+    <div class="feature">
+      <h3>Work at the level where change happens</h3>
+    </div>
+
+    <div class="feature">
+      <h3>A different kind of therapeutic process</h3>
+      <p></p>
+    </div>
+
+    <div class="feature">
+      <h3>Subtle, deep, integrated work</h3>
+      <p></p>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section">
+  <h2 style="font-family: Playfair Display;">How this works</h2>
+
+  <div class="steps">
+    <div class="step">
+      <h1>1</h1>
+      <p>We start with a simple conversation</p>
+    </div>
+
+    <div class="step">
+      <h1>2</h1>
+      <p>We begin working — not just talking</p>
+    </div>
+
+    <div class="step">
+      <h1>3</h1>
+      <p>You start noticing real shifts in your life</p>
+    </div>
+  </div>
+
+  <div class="quote">
+    “People heal from their pain when they have an authentic connection with another human.”
+    <br>— Marshall B. Rosenberg
+  </div>
+</section>
+
+<!-- FOOTER -->
+<section class="footer">
+  <p>If this speaks to you, we can start with a simple conversation.</p>
+
+  <div>
+    <a href="#">WhatsApp</a>
+    <a href="#">Email</a>
+  </div>
+</section>
+
+</body>
+</html>
