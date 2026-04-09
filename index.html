@@ -140,33 +140,45 @@ body {
 
 /* FOOTER */
 .cta {
-  background: #eae6df;
+  position: relative;
+  background: url('images/hero.jpg') center/cover no-repeat;
+  padding: 100px 20px;
   text-align: center;
-  padding: 70px 20px;
 }
 
-.cta p {
-  font-family: 'Playfair Display', serif;
-  font-size: 24px;
-  margin-bottom: 30px;
-  color: #2f2f2f;
+.cta-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0,0,0,0.75) 0%,
+    rgba(0,0,0,0.65) 30%,
+    rgba(0,0,0,0.4) 60%,
+    rgba(0,0,0,0.2) 80%,
+    rgba(0,0,0,0.1) 100%
+  );
 }
 
+.cta-content {
+  position: relative;
+  color: #f2efe9;
+  max-width: 700px;
+  margin: auto;
+}
+  
 .cta-buttons a {
   display: inline-block;
-  margin: 0 10px;
-  padding: 12px 22px;
-  border: 1px solid #2f2f2f;
-  color: #2f2f2f;
+  margin: 15px 10px 0;
+  padding: 12px 24px;
+  border: 1px solid rgba(255,255,255,0.6);
+  color: #f2efe9;
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
 .cta-buttons a:hover {
-  background: #2f2f2f;
-  color: white;
+  background: rgba(255,255,255,0.1);
 }
-
 /* MOBILE */
 @media (max-width: 900px) {
   .hero {
@@ -254,13 +266,14 @@ body {
 
 <!-- FOOTER -->
 <section class="cta">
-  <p>If this speaks to you, we can start with a simple conversation.</p>
+  <div class="cta-overlay"></div>
 
-  <div class="cta-buttons">
-    <a href="#">WhatsApp</a>
-    <a href="#">Email</a>
+  <div class="cta-content">
+    <p>If this speaks to you, we can start with a simple conversation.</p>
+
+    <div class="cta-buttons">
+      <a href="#">WhatsApp</a>
+      <a href="#">Email</a>
+    </div>
   </div>
 </section>
-
-</body>
-</html>
