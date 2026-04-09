@@ -61,7 +61,7 @@ body {
 }
 
 .hero h1 {
-  color: #ffffff;
+  color: #f2efe9;
 }  
 
 .hero h1 {
@@ -139,18 +139,32 @@ body {
 }
 
 /* FOOTER */
-.footer {
-  background: #2f2f2f;
-  color: white;
+.cta {
+  background: #eae6df;
   text-align: center;
-  padding: 50px 20px;
+  padding: 70px 20px;
 }
 
-.footer a {
-  color: white;
-  margin: 0 15px;
+.cta p {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  margin-bottom: 30px;
+  color: #2f2f2f;
+}
+
+.cta-buttons a {
+  display: inline-block;
+  margin: 0 10px;
+  padding: 12px 22px;
+  border: 1px solid #2f2f2f;
+  color: #2f2f2f;
   text-decoration: none;
-  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.cta-buttons a:hover {
+  background: #2f2f2f;
+  color: white;
 }
 
 /* MOBILE */
@@ -239,10 +253,10 @@ body {
 </section>
 
 <!-- FOOTER -->
-<section class="footer">
+<section class="cta">
   <p>If this speaks to you, we can start with a simple conversation.</p>
 
-  <div>
+  <div class="cta-buttons">
     <a href="#">WhatsApp</a>
     <a href="#">Email</a>
   </div>
