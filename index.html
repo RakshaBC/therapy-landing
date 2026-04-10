@@ -54,6 +54,20 @@ body {
   z-index: 2;
 }
 
+  .hero-content {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1.2s ease forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .hero h1 {
   font-family: 'Playfair Display', serif;
   font-size: 56px;
@@ -98,6 +112,19 @@ body {
   background: #f4f1ed;
 }
 
+.section,
+.cta {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.section.visible,
+.cta.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+  
 .features {
   display: flex;
   gap: 40px;
@@ -220,7 +247,6 @@ body {
 <section class="hero">
   <div class="hero-image"></div>
   <div class="overlay"></div>
-
   <div class="hero-content">
     <h1>
       You don’t need years of therapy<br>
@@ -305,3 +331,22 @@ body {
     </div>
   </div>
 </section>
+
+<script>
+const sections = document.querySelectorAll('.section, .cta');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+});
+
+sections.forEach(section => {
+  observer.observe(section);
+});
+</script>
+
+</body>
+</html>
